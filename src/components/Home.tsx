@@ -1,15 +1,17 @@
-import React from "react"
-import { useSiteMetadata } from "../hooks/use-site-metadata"
-import { css } from "@emotion/core"
+import React from 'react'
+import { useSiteMetadata } from '../hooks/use-site-metadata'
+import { css } from '@emotion/core'
 
-import Header from "./header"
-import "./layout.css"
-import { headerHeight } from "../styles"
-import Footer from "./Footer"
+import Header from './header'
+import './layout.css'
+import { headerHeight } from '../styles'
+import Footer from './Footer'
+
+export const pagePaddingValue = 10
 
 const pagePadding = css`
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: ${pagePaddingValue}%;
+    padding-right: ${pagePaddingValue}%;
 `
 const pageCss = css`
     ${pagePadding}

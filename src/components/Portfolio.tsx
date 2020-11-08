@@ -3,36 +3,48 @@ import { StyledH2, StyledP, StyledP2, StyledH3 } from '../styles'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import { useSiteMetadata } from '../hooks/use-site-metadata'
+import { pagePaddingValue } from './Home'
 
+const PortfolioQuadrant = styled.div`
+    width: 100vw;
+    display: flex;
+    flex-flow: column nowrap;
+
+    margin-left: -${pagePaddingValue}vw;
+`
 const outerDiv = css`
+    position: relative;
     width: 100%;
     height: 100%;
-    max-width: 540px;
-    height: 400px;
-    background: #ffffff;
-    margin-bottom: 50px;
+
+    &:hover {
+        div {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            cursor: pointer;
+        }
+    }
 `
 
 //placeholder
 const imgDiv = css`
     width: 100%;
     height: 100%;
-    max-width: 540px;
     height: 280px;
     background: #c4c4c4;
-    float: top;
+
+    clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+    transition: clip-path 0.5s ease-in-out;
 `
 
-const PortfolioQuadrant = styled.div`
-    height: 100%;
-    display: flex;
-    flex-flow: ${window.innerWidth > 1350 ? 'row' : 'column'} wrap;
-    justify-content: ${window.innerWidth > 1350 ? 'space-between' : 'center'};
-    align-content: center;
-`
-
+// TODO make link
 const textContainer = css`
-    padding: 20px 0 0 20px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+
+    display: grid;
+    place-items: center;
 `
 
 const PortfolioItem = props => {
@@ -42,10 +54,12 @@ const PortfolioItem = props => {
         <div css={outerDiv}>
             <div css={imgDiv}></div>
             <div css={textContainer}>
-                <StyledH3 style={{ textAlign: 'left', paddingBottom: '10px' }}>
-                    {title}
-                </StyledH3>
-                <StyledP2 style={{ textAlign: 'left' }}>{description}</StyledP2>
+                <div>
+                    <StyledH3 style={{ paddingBottom: '10px' }}>
+                        {title}
+                    </StyledH3>
+                    <StyledP2>{description}</StyledP2>
+                </div>
             </div>
         </div>
     )
