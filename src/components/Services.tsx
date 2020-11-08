@@ -1,4 +1,4 @@
-import React, { ReactElement, FunctionComponent } from 'react'
+import React, { FunctionComponent } from 'react'
 import { StyledH2, StyledP, StyledP2, StyledH3 } from '../styles'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
@@ -16,16 +16,20 @@ const IconContainer = styled.div`
     display: flex;
 
     /* TODO media query instead */
-    flex-flow: ${window.innerWidth > 1320 ? 'row' : 'column'} nowrap;
+    /* flex-flow: ${window.innerWidth > 1320 ? 'row' : 'column'} nowrap;
     justify-content: space-between;
-    align-items: ${window.innerWidth > 1320 ? 'flex-start' : 'center'};
+    align-items: ${window.innerWidth > 1320 ? 'flex-start' : 'center'}; */
+
+    /* deconstructed pancake */
+    flex-wrap: wrap;
+    justify-content: center;
 `
 
 type IconProps = {
     ellipseColor: string
 }
 
-const Icon: React.FunctionComponent<IconProps> = props => {
+const Icon: FunctionComponent<IconProps> = props => {
     const { ellipseColor, children } = props
 
     const Ellipse = styled.div`
@@ -48,19 +52,22 @@ type ServicesIconGroupProps = {
     style?: string
 }
 
-const ServicesIconGroup: React.FunctionComponent<ServicesIconGroupProps> = props => {
+const ServicesIconGroup: FunctionComponent<ServicesIconGroupProps> = props => {
     const { ellipseColor, heading, blurb, children, style } = props
 
     const servicesIconCss = css`
-        display: flex;
-        width: ${window.innerWidth > 1320 ? `33%` : `100%`};
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 30px;
+        /* width: ${window.innerWidth > 1320 ? `33%` : `100%`}; */
         /* TODO media query instead */
-        margin-right: ${window.innerWidth > 1320 ? '30px' : '0px'};
-        ${style};
+        /* margin-right: ${window.innerWidth > 1320 ? '30px' : '0px'}; */
+
+        flex: 0 1 300px;
+        margin: 30px;
+        display: grid;
+        place-items: center;
+        align-items: start;
+        grid-auto-rows: min-content;
+
+        ${style}
     `
 
     return (
@@ -103,7 +110,6 @@ const Services = () => {
                     <Code css={iconCss} color={'#FF631F'} size={34} />
                 </ServicesIconGroup>
                 <ServicesIconGroup
-                    style={'margin-right: 0;'}
                     heading={services[2]?.title}
                     blurb={services[2]?.blurb}
                     ellipseColor={'#FFF9C8'}
