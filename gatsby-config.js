@@ -4,9 +4,13 @@ module.exports = {
         description: `Hi, I’m Ailish 👋`,
         author: `@ailishmccarthy`,
         navs: [
-            { title: 'Services', url: '#services' },
-            { title: 'Portfolio', url: '#portfolio' },
-            { title: 'Contact', url: '#contact' },
+            {
+                title: 'Services',
+                url: '#Services',
+                info: 'Below are just some of the services I offer',
+            },
+            { title: 'Portfolio', url: '#portfolio', info: '' },
+            { title: 'Contact', url: '#contact', info: '' },
         ],
         services: [
             {

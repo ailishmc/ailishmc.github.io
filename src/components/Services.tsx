@@ -85,14 +85,22 @@ const iconCss = css`
     left: 35%;
 `
 
-const Services = () => {
+interface ServicesProps {
+    title: string
+    info: string
+}
+
+const Services = (props: ServicesProps) => {
     const { services } = useSiteMetadata()
+
+    const title = props.title
+    const info = props.info
 
     return (
         <div css={styles}>
             <div>
-                <StyledH2 id={'services'}>Services</StyledH2>
-                <StyledP>Below are just some of the services I offer</StyledP>
+                <StyledH2 id={title}>{title}</StyledH2>
+                <StyledP>{info}</StyledP>
             </div>
             <IconContainer>
                 <ServicesIconGroup
