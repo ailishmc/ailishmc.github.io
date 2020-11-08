@@ -9,7 +9,11 @@ module.exports = {
                 url: '#Services',
                 info: 'Below are just some of the services I offer',
             },
-            { title: 'Portfolio', url: '#portfolio', info: '' },
+            {
+                title: 'Portfolio',
+                url: '#Portfolio',
+                info: 'Here are some select portfolio pieces',
+            },
             { title: 'Contact', url: '#contact', info: '' },
         ],
         services: [

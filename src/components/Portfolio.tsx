@@ -56,7 +56,12 @@ const containerCss = css`
     padding-bottom: 50px;
 `
 
-const Portfolio = () => {
+interface PortfolioProps {
+    title: string
+    info: string
+}
+
+const Portfolio = (props: PortfolioProps) => {
     const { portfolio } = useSiteMetadata()
     const items = []
 
@@ -68,8 +73,8 @@ const Portfolio = () => {
 
     return (
         <div css={containerCss}>
-            <StyledH2 id={'portfolio'}>Portfolio</StyledH2>
-            <StyledP>Here are some select portfolio pieces</StyledP>
+            <StyledH2 id={props.title}>{props.title}</StyledH2>
+            <StyledP>{props.info}</StyledP>
             <PortfolioQuadrant>{items}</PortfolioQuadrant>
         </div>
     )
