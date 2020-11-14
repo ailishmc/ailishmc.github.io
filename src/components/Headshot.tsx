@@ -1,19 +1,13 @@
-import React, { RefObject } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import { css } from "@emotion/core"
-
-const imgCss = css`
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-`
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 const Headshot = () => {
     const data = useStaticQuery(graphql`
         query HeaderImageQuery {
-            headerImage: file(relativePath: { eq: "headshot_bw.jpg" }) {
+            headerImage: file(relativePath: { eq: "headshot_nobg.png" }) {
                 childImageSharp {
-                    fluid(maxWidth: 473, maxHeight: 560, cropFocus: CENTER) {
+                    fluid(maxWidth: 400, maxHeight: 460, cropFocus: CENTER) {
                         ...GatsbyImageSharpFluid
                     }
                 }
@@ -22,9 +16,8 @@ const Headshot = () => {
     `)
     return (
         <Img
-            css={imgCss}
             fadeIn={true}
-            alt={"Ailish McCarthy Headshot"}
+            alt={'Ailish McCarthy Headshot'}
             fluid={data.headerImage.childImageSharp.fluid}
         />
     )

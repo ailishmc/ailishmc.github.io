@@ -1,7 +1,18 @@
 module.exports = {
     siteMetadata: {
         title: `Ailish McCarthy`,
-        description: `Hi, I’m Ailish 👋`,
+        description: {
+            heading: `Hi, I’m Ailish`,
+            emoji: `👋`,
+            par1: `I’m a web developer and designer from Ireland. I
+                    have years of experience building accessibile and
+                    highly performant enterprise applications and am now
+                    moving into the freelancing space. Please get in
+                    touch with your project ideas!`,
+            par2: `I’m especially excited to collaborate on creative
+                    work.`,
+            par3: ``,
+        },
         author: `@ailishmccarthy`,
         navs: [
             {

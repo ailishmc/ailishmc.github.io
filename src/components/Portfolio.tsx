@@ -55,10 +55,17 @@ const PortfolioItem = props => {
             <div css={imgDiv}></div>
             <div css={textContainer}>
                 <div>
-                    <StyledH3 style={{ paddingBottom: '10px' }}>
+                    <StyledH3
+                        style={{
+                            paddingBottom: '10px',
+                            mixBlendMode: 'difference',
+                        }}
+                    >
                         {title}
                     </StyledH3>
-                    <StyledP2>{description}</StyledP2>
+                    <StyledP2 style={{ mixBlendMode: 'difference' }}>
+                        {description}
+                    </StyledP2>
                 </div>
             </div>
         </div>

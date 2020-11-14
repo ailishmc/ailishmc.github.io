@@ -71,7 +71,16 @@ const parCss = css`
     opacity: 0;
 `
 
-const Hero = () => {
+interface HeroProps {
+    heading: string
+    emoji?: string
+    par1: string
+    par2?: string
+}
+
+const Hero = (props: HeroProps) => {
+    const { heading, emoji, par1, par2 } = props
+
     const containerRef: RefObject<HTMLDivElement> = React.createRef()
     const h2Ref: RefObject<HTMLDivElement> = React.createRef()
     const parRef: RefObject<HTMLDivElement> = React.createRef()
@@ -133,26 +142,23 @@ const Hero = () => {
                 <div css={blurbCss}>
                     <div css={hideTextCss}>
                         <h2 ref={h2Ref}>
-                            Hi, I’m Ailish&nbsp;
-                            <motion.div
-                                style={{ display: 'inline-block' }}
-                                initial={{ opacity: 0 }}
-                                animate={animate}
-                            >
-                                👋
-                            </motion.div>
+                            {`${heading} `}
+                            {emoji && (
+                                <motion.div
+                                    style={{ display: 'inline-block' }}
+                                    initial={{ opacity: 0 }}
+                                    animate={animate}
+                                >
+                                    {emoji}
+                                </motion.div>
+                            )}
                         </h2>
                     </div>
                     <div>
                         <StyledP ref={parRef} css={parCss}>
-                            I’m a web developer and designer from Ireland. I
-                            have years of experience building accessibile and
-                            highly performant enterprise applications and am now
-                            moving into the freelancing space. Please get in
-                            touch with your project ideas!
+                            {par1}
                             <br css={br} />
-                            I’m especially excited to collaborate on creative
-                            work.
+                            {par2}
                         </StyledP>
                     </div>
                 </div>
