@@ -10,8 +10,7 @@ export const useSiteMetadata = () => {
                         description {
                             heading
                             emoji
-                            par1
-                            par2
+                            pars
                         }
                         author
                         navs {
@@ -27,6 +26,7 @@ export const useSiteMetadata = () => {
                             title
                             blurb
                         }
+                        socials
                     }
                 }
             }

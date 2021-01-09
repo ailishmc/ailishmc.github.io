@@ -4,14 +4,12 @@ module.exports = {
         description: {
             heading: `Hi, I’m Ailish`,
             emoji: `👋`,
-            par1: `I’m a web developer and designer from Ireland. I
+            pars: [
+                `I’m a web developer and sometimes designer based in Dublin. I
                     have years of experience building accessibile and
-                    highly performant enterprise applications and am now
-                    moving into the freelancing space. Please get in
-                    touch with your project ideas!`,
-            par2: `I’m especially excited to collaborate on creative
-                    work.`,
-            par3: ``,
+                    highly performant enterprise applications. Currently working frontend at Workday but available for freelance work.`,
+                `Please get in touch with your project ideas!`,
+            ],
         },
         author: `@ailishmccarthy`,
         navs: [
@@ -58,6 +56,11 @@ module.exports = {
                 title: 'Vintage Clothing Online Store',
                 blurb: 'Web Design & Development (Shopify)',
             },
+        ],
+        socials: [
+            'https://www.instagram.com/ailsmckails/',
+            'https://twitter.com/AilishMcCarthy',
+            'https://www.linkedin.com/in/ailishmccarthy/',
         ],
     },
     plugins: [

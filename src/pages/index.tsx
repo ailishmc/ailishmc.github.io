@@ -9,14 +9,26 @@ import Portfolio from '../components/Portfolio'
 import { useSiteMetadata } from '../hooks/use-site-metadata'
 
 const IndexPage = () => {
-    const { navs, title, lang, author, description } = useSiteMetadata()
-    const { heading, emoji, par1, par2 } = description
+    const {
+        navs,
+        title,
+        lang,
+        author,
+        description,
+        socials,
+    } = useSiteMetadata()
+    const { heading, emoji, pars } = description
 
     return (
         <Router>
             <Home>
                 <SEO title={title} lang={lang} author={author} />
-                <Hero heading={heading} emoji={emoji} par1={par1} par2={par2} />
+                <Hero
+                    heading={heading}
+                    emoji={emoji}
+                    pars={pars}
+                    socials={socials}
+                />
                 <Services title={navs[0].title} info={navs[0].info} />
                 <Portfolio title={navs[1].title} info={navs[1].info} />
             </Home>

@@ -3,6 +3,7 @@ import React from 'react'
 import { headerHeight } from '../styles'
 import NavMenu from './NavMenu'
 import { SerializedStyles, css } from '@emotion/core'
+import { HashLink as Link } from 'react-router-hash-link'
 
 const HeaderStyled = styled.header`
     position: fixed;
@@ -43,10 +44,20 @@ interface HeaderProps {
     navs?: []
 }
 
-const Header = ({ siteTitle, padding, navs }: HeaderProps) => (
+const Header = ({ siteTitle, navs }: HeaderProps) => (
     <HeaderStyled>
         <div css={relativeContainer}>
-            <TitleStyled> {siteTitle} </TitleStyled>
+            <TitleStyled>
+                {/* todo make accessible  */}
+                <a
+                    style={{ cursor: 'pointer' }}
+                    onClick={() => {
+                        window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }}
+                >
+                    {siteTitle}
+                </a>
+            </TitleStyled>
             {navs && <NavMenu navs={navs}></NavMenu>}
         </div>
     </HeaderStyled>

@@ -23,9 +23,8 @@ const blurbCss = css`
         font-family: Inter;
         font-style: normal;
         font-weight: 600;
-        font-size: 2rem;
+        font-size: 1.75rem;
         line-height: 2.5rem;
-        word-wrap: nowrap;
 
         color: #000000;
     }
@@ -63,17 +62,18 @@ const hideTextCss = css`
 const parCss = css`
     text-align: left;
     opacity: 0;
+    padding-bottom: 20px;
 `
 
 interface HeroProps {
     heading: string
     emoji?: string
-    par1: string
-    par2?: string
+    pars: string[]
+    socials: string[]
 }
 
 const Hero = (props: HeroProps) => {
-    const { heading, emoji, par1, par2 } = props
+    const { heading, emoji, pars, socials } = props
 
     const containerRef: RefObject<HTMLDivElement> = React.createRef()
     const h2Ref: RefObject<HTMLDivElement> = React.createRef()
@@ -150,24 +150,25 @@ const Hero = (props: HeroProps) => {
                             )}
                         </h2>
                     </div>
-                    <div>
-                        <StyledP ref={parRef} css={parCss}>
-                            {par1}
-                            <br css={br} />
-                            {par2}
-                        </StyledP>
+                    <div ref={parRef} css={parCss}>
+                        {pars.map(par => (
+                            <StyledP>
+                                {par}
+                                <br css={br} />
+                            </StyledP>
+                        ))}
                     </div>
                 </div>
                 <SocialContainer>
-                    <SocialLink ref={socialOne} href="">
+                    <SocialLink ref={socialOne} href={socials[0]}>
                         <VisuallyHidden>Facebook</VisuallyHidden>
                         <Instagram color="#FC6450" aria-hidden={'true'} />
                     </SocialLink>
-                    <SocialLink ref={socialTwo} href="">
+                    <SocialLink ref={socialTwo} href={socials[1]}>
                         <VisuallyHidden>Twitter</VisuallyHidden>
                         <Twitter color="#FF8F2C" aria-hidden={'true'} />
                     </SocialLink>
-                    <SocialLink ref={socialThree} href="">
+                    <SocialLink ref={socialThree} href={socials[2]}>
                         <VisuallyHidden>LinkedIn</VisuallyHidden>
                         <Linkedin color="#FFC000" aria-hidden={'true'} />
                     </SocialLink>

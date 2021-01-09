@@ -32,8 +32,8 @@ export const StyledP = styled.p`
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.5rem;
-    padding-bottom: 50px;
-    text-align: center;
+    padding-bottom: inherit;
+    text-align: inherit;
 
     color: #6a6a6a;
 `
