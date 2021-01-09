@@ -8,33 +8,27 @@ import { motion } from 'framer-motion'
 import gsap from 'gsap'
 
 const containerCss = css`
+    height: 90vh;
     visibility: hidden;
     display: flex;
     justify-content: space-between;
+    position: relative;
 `
 
 const blurbCss = css`
-    max-width: 470px;
-    margin-left: 25px;
+    max-width: 500px;
     position: relative;
 
     h2 {
         font-family: Inter;
         font-style: normal;
         font-weight: 600;
-        font-size: calc(21.6px + 1vw);
-        line-height: calc(29.6px + 1vw);
+        font-size: 2rem;
+        line-height: 2.5rem;
         word-wrap: nowrap;
 
         color: #000000;
     }
-`
-
-const headshotContainer = css`
-    position: relative;
-    width: 100%;
-    max-width: 473px;
-    max-height: 560px;
 `
 
 const SocialContainer = styled.div`
@@ -134,11 +128,13 @@ const Hero = (props: HeroProps) => {
 
     return (
         <div css={containerCss} ref={containerRef}>
-            <div css={headshotContainer}>
-                {/* TODO: cut out headshot background */}
-                <Headshot />
-            </div>
-            <div>
+            <div
+                css={css`
+                    right: 0px;
+                    top: 20%;
+                    position: absolute;
+                `}
+            >
                 <div css={blurbCss}>
                     <div css={hideTextCss}>
                         <h2 ref={h2Ref}>

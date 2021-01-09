@@ -15,9 +15,7 @@ const pagePadding = css`
 `
 const pageCss = css`
     ${pagePadding}
-    padding-top: 100px;
     margin-top: ${headerHeight}px;
-    background-color: #ffffff;
 `
 
 const Home = ({ children }) => {

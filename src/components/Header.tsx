@@ -1,18 +1,18 @@
-import styled from "@emotion/styled"
-import React from "react"
-import { headerHeight } from "../styles"
-import NavMenu from "./NavMenu"
-import { SerializedStyles, css } from "@emotion/core"
+import styled from '@emotion/styled'
+import React from 'react'
+import { headerHeight } from '../styles'
+import NavMenu from './NavMenu'
+import { SerializedStyles, css } from '@emotion/core'
 
 const HeaderStyled = styled.header`
     position: fixed;
-    height: ${headerHeight}px;
+    height: 10vh;
     width: 100%;
     top: 0px;
     margin: auto;
     z-index: 50;
-    background: #ffe7db;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    padding: 0 5%;
+    mix-blend-mode: color-burn;
 `
 
 const TitleStyled = styled.h1`
@@ -44,7 +44,7 @@ interface HeaderProps {
 }
 
 const Header = ({ siteTitle, padding, navs }: HeaderProps) => (
-    <HeaderStyled css={padding}>
+    <HeaderStyled>
         <div css={relativeContainer}>
             <TitleStyled> {siteTitle} </TitleStyled>
             {navs && <NavMenu navs={navs}></NavMenu>}

@@ -1,4 +1,4 @@
-import styled from "@emotion/styled"
+import styled from '@emotion/styled'
 
 export const headerHeight = 100
 
@@ -30,8 +30,8 @@ export const StyledP = styled.p`
     font-family: Inter;
     font-style: normal;
     font-weight: normal;
-    font-size: calc(9px + 0.8vw);
-    line-height: calc(8px + 1.5vw);
+    font-size: 1rem;
+    line-height: 1.5rem;
     padding-bottom: 50px;
     text-align: center;
 
