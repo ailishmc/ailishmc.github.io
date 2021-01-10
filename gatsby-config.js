@@ -16,7 +16,6 @@ module.exports = {
             {
                 title: 'services',
                 url: '#services',
-                info: 'Below are just some of the services I offer',
             },
             {
                 title: 'portfolio',
