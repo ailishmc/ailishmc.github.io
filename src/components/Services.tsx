@@ -5,11 +5,8 @@ import styled from '@emotion/styled'
 import { useSiteMetadata } from '../hooks/use-site-metadata'
 import { PenTool, Code, ThumbsUp } from 'react-feather'
 
-const styles = css`
-    padding: 100px 0;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+const servicesContainer = css`
+    height: 100vh;
 `
 
 const IconContainer = styled.div`
@@ -97,7 +94,7 @@ const Services = (props: ServicesProps) => {
     const info = props.info
 
     return (
-        <div css={styles}>
+        <div id="services" css={servicesContainer}>
             <div>
                 <StyledH2 id={title}>{title}</StyledH2>
                 <StyledP>{info}</StyledP>

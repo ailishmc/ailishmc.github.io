@@ -15,18 +15,16 @@ module.exports = {
         navs: [
             {
                 title: 'services',
-                url: '#Services',
+                url: '#services',
                 info: 'Below are just some of the services I offer',
             },
             {
                 title: 'portfolio',
-                url: '#Portfolio',
-                info: 'Here are some select portfolio pieces',
+                url: '#portfolio',
             },
             {
                 title: 'contact',
                 url: 'mailto:ailishmccarthy94@gmail.com',
-                info: '',
             },
         ],
         services: [

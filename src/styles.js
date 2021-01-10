@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 export const headerHeight = 100
 
 export const StyledH2 = styled.h2`
+    padding-top: 50px;
     font-style: normal;
     font-weight: 600;
     font-size: 30px;

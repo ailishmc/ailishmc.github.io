@@ -73,8 +73,7 @@ const PortfolioItem = props => {
 }
 
 const containerCss = css`
-    height: 100%;
-    padding-bottom: 50px;
+    height: 100vh;
 `
 
 interface PortfolioProps {
@@ -93,7 +92,7 @@ const Portfolio = (props: PortfolioProps) => {
     }
 
     return (
-        <div css={containerCss}>
+        <div id="portfolio" css={containerCss}>
             <StyledH2 id={props.title}>{props.title}</StyledH2>
             <StyledP>{props.info}</StyledP>
             <PortfolioQuadrant>{items}</PortfolioQuadrant>

@@ -1,7 +1,6 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
-import { HashLink as Link } from 'react-router-hash-link'
 
 const ListContainer = styled.ul`
     display: flex;
@@ -55,18 +54,16 @@ const NavMenu = ({ navs }: NavMenuProps) => {
         } else {
             navItems.push(
                 <li>
-                    <Link
-                        scroll={el =>
-                            el.scrollIntoView({
-                                behavior: 'smooth',
-                                block: 'center',
-                            })
-                        }
+                    <a
+                        onClick={() => {
+                            const top = document.getElementById(nav.title)
+                                .offsetTop
+                            window.scrollTo({ top, behavior: 'smooth' })
+                        }}
                         css={navItem}
-                        to={nav.url}
                     >
                         {nav.title}
-                    </Link>
+                    </a>
                 </li>
             )
         }
