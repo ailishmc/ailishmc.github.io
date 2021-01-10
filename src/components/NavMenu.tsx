@@ -44,22 +44,32 @@ const NavMenu = ({ navs }: NavMenuProps) => {
     const navItems = []
 
     for (const nav of navs) {
-        navItems.push(
-            <li>
-                <Link
-                    scroll={el =>
-                        el.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'center',
-                        })
-                    }
-                    css={navItem}
-                    to={nav.url}
-                >
-                    {nav.title}
-                </Link>
-            </li>
-        )
+        if (nav.title == 'contact') {
+            navItems.push(
+                <li>
+                    <a css={navItem} href={nav.url}>
+                        {nav.title}
+                    </a>
+                </li>
+            )
+        } else {
+            navItems.push(
+                <li>
+                    <Link
+                        scroll={el =>
+                            el.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'center',
+                            })
+                        }
+                        css={navItem}
+                        to={nav.url}
+                    >
+                        {nav.title}
+                    </Link>
+                </li>
+            )
+        }
     }
 
     return (

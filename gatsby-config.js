@@ -23,7 +23,11 @@ module.exports = {
                 url: '#Portfolio',
                 info: 'Here are some select portfolio pieces',
             },
-            { title: 'contact', url: '#contact', info: '' },
+            {
+                title: 'contact',
+                url: 'mailto:ailishmccarthy94@gmail.com',
+                info: '',
+            },
         ],
         services: [
             {

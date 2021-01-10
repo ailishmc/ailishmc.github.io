@@ -27,7 +27,6 @@ const Home = ({ children }) => {
             <div css={pageCss}>
                 <main>{children}</main>
             </div>
-            <Footer></Footer>
         </>
     )
 }
