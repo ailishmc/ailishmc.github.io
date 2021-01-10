@@ -7,6 +7,9 @@ import { PenTool, Code, ThumbsUp } from 'react-feather'
 
 const servicesContainer = css`
     height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
 `
 
 const IconContainer = styled.div`

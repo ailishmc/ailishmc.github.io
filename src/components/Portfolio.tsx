@@ -74,6 +74,9 @@ const PortfolioItem = props => {
 
 const containerCss = css`
     height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
 `
 
 interface PortfolioProps {

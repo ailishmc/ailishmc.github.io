@@ -48,6 +48,10 @@ module.exports = {
                 title: 'Coming Soon',
                 blurb: '',
             },
+            {
+                title: 'Coming Soon',
+                blurb: '',
+            },
         ],
         socials: [
             'https://www.instagram.com/ailsmckails/',
