@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-        title: `Ailish McCarthy`,
+        title: `AILISH MCCARTHY`,
         description: {
             heading: `Hi, I’m Ailish`,
             emoji: `👋`,
@@ -14,16 +14,16 @@ module.exports = {
         author: `@ailishmccarthy`,
         navs: [
             {
-                title: 'Services',
+                title: 'services',
                 url: '#Services',
                 info: 'Below are just some of the services I offer',
             },
             {
-                title: 'Portfolio',
+                title: 'portfolio',
                 url: '#Portfolio',
                 info: 'Here are some select portfolio pieces',
             },
-            { title: 'Contact', url: '#contact', info: '' },
+            { title: 'contact', url: '#contact', info: '' },
         ],
         services: [
             {

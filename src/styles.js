@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 export const headerHeight = 100
 
 export const StyledH2 = styled.h2`
-    font-family: Inter;
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
@@ -15,7 +14,6 @@ export const StyledH2 = styled.h2`
 `
 
 export const StyledH3 = styled.h3`
-    font-family: Inter;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -27,7 +25,6 @@ export const StyledH3 = styled.h3`
 `
 
 export const StyledP = styled.p`
-    font-family: Inter;
     font-style: normal;
     font-weight: normal;
     font-size: 1rem;
@@ -39,7 +36,6 @@ export const StyledP = styled.p`
 `
 
 export const StyledP2 = styled.p`
-    font-family: Inter;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;

@@ -17,7 +17,6 @@ const flexColumn = css`
 `
 
 const text = css`
-    font-family: Inter;
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
@@ -37,7 +36,6 @@ const contact = css`
     border: none;
     outline: none;
 
-    font-family: Inter;
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
@@ -52,7 +50,6 @@ const contact = css`
 `
 
 const CV = css`
-    font-family: Inter;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;

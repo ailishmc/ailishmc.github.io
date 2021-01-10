@@ -3,7 +3,6 @@ import React from 'react'
 import { headerHeight } from '../styles'
 import NavMenu from './NavMenu'
 import { SerializedStyles, css } from '@emotion/core'
-import { HashLink as Link } from 'react-router-hash-link'
 
 const HeaderStyled = styled.header`
     position: fixed;
@@ -12,17 +11,20 @@ const HeaderStyled = styled.header`
     top: 0px;
     margin: auto;
     z-index: 50;
-    padding: 0 5%;
+    @media (min-width: 680px) {
+        padding: 0 5%;
+    }
+    padding: 0 10%;
+
     mix-blend-mode: color-burn;
 `
 
 const TitleStyled = styled.h1`
+    font-family: 'HK Grotesk';
     display: inline-block;
     width: fit-content;
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
     word-wrap: break-word;
 
     color: rgba(17, 17, 17, 0.76);

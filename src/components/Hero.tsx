@@ -20,11 +20,10 @@ const blurbCss = css`
     position: relative;
 
     h2 {
-        font-family: Inter;
         font-style: normal;
         font-weight: 600;
-        font-size: 1.75rem;
-        line-height: 2.5rem;
+        font-size: 1.75em;
+        letter-spacing: 0.05em;
 
         color: #000000;
     }

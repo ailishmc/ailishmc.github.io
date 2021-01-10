@@ -18,10 +18,11 @@ const ListContainer = styled.ul`
 `
 
 const navItem = css`
-    font-family: Inter;
     font-style: normal;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 1.1rem;
+    letter-spacing: 0.07rem;
+    -webkit-text-decoration: none;
     text-decoration: none;
 
     color: rgba(17, 17, 17, 0.46);
