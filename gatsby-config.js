@@ -48,17 +48,8 @@ module.exports = {
         ],
         portfolio: [
             {
-                title: 'Fitness Tracker App (iOS/Android)',
-                blurb: 'Mobile App Design & Development',
-            },
-            { title: 'Festival Website Design', blurb: 'Web Design' },
-            {
-                title: 'Sustainable Online Portal ',
-                blurb: 'Web Design & Development',
-            },
-            {
-                title: 'Vintage Clothing Online Store',
-                blurb: 'Web Design & Development (Shopify)',
+                title: 'Coming Soon',
+                blurb: '',
             },
         ],
         socials: [

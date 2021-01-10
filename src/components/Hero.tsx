@@ -159,15 +159,30 @@ const Hero = (props: HeroProps) => {
                     </div>
                 </div>
                 <SocialContainer>
-                    <SocialLink ref={socialOne} href={socials[0]}>
+                    <SocialLink
+                        ref={socialOne}
+                        href={socials[0]}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
                         <VisuallyHidden>Facebook</VisuallyHidden>
                         <Instagram color="#FC6450" aria-hidden={'true'} />
                     </SocialLink>
-                    <SocialLink ref={socialTwo} href={socials[1]}>
+                    <SocialLink
+                        ref={socialTwo}
+                        href={socials[1]}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
                         <VisuallyHidden>Twitter</VisuallyHidden>
                         <Twitter color="#FF8F2C" aria-hidden={'true'} />
                     </SocialLink>
-                    <SocialLink ref={socialThree} href={socials[2]}>
+                    <SocialLink
+                        ref={socialThree}
+                        href={socials[2]}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
                         <VisuallyHidden>LinkedIn</VisuallyHidden>
                         <Linkedin color="#FFC000" aria-hidden={'true'} />
                     </SocialLink>
