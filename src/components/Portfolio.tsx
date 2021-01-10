@@ -76,7 +76,7 @@ const containerCss = css`
     height: 100vh;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
+    justify-content: space-evenly;w
 `
 
 interface PortfolioProps {
