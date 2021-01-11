@@ -36,7 +36,6 @@ const imgDiv = css`
     transition: clip-path 0.5s ease-in-out;
 `
 
-// TODO make link
 const textContainer = css`
     position: absolute;
     height: 100%;
@@ -76,7 +75,7 @@ const containerCss = css`
     height: 100vh;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;w
+    justify-content: space-evenly;
 `
 
 interface PortfolioProps {
