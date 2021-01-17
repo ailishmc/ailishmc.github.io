@@ -54,7 +54,7 @@ const Header = ({ siteTitle, navs }: HeaderProps) => (
                 <a
                     style={{ cursor: 'pointer' }}
                     onClick={() => {
-                        window.scrollTo({ top: 0, behavior: 'smooth' })
+                        window?.scrollTo({ top: 0, behavior: 'smooth' })
                     }}
                 >
                     {siteTitle}

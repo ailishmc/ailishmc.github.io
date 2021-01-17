@@ -6,7 +6,7 @@ import { useSiteMetadata } from '../hooks/use-site-metadata'
 import { PenTool, Code, ThumbsUp } from 'react-feather'
 
 const servicesContainer = css`
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
@@ -14,11 +14,6 @@ const servicesContainer = css`
 
 const IconContainer = styled.div`
     display: flex;
-
-    /* TODO media query instead */
-    /* flex-flow: ${window.innerWidth > 1320 ? 'row' : 'column'} nowrap;
-    justify-content: space-between;
-    align-items: ${window.innerWidth > 1320 ? 'flex-start' : 'center'}; */
 
     /* deconstructed pancake */
     flex-wrap: wrap;
@@ -56,10 +51,6 @@ const ServicesIconGroup: FunctionComponent<ServicesIconGroupProps> = props => {
     const { ellipseColor, heading, blurb, children, style } = props
 
     const servicesIconCss = css`
-        /* width: ${window.innerWidth > 1320 ? `33%` : `100%`}; */
-        /* TODO media query instead */
-        /* margin-right: ${window.innerWidth > 1320 ? '30px' : '0px'}; */
-
         flex: 0 1 300px;
         margin: 30px;
         display: grid;

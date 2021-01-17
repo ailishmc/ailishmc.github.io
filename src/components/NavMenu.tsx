@@ -56,9 +56,9 @@ const NavMenu = ({ navs }: NavMenuProps) => {
                 <li>
                     <a
                         onClick={() => {
-                            const top = document.getElementById(nav.title)
+                            const top = document?.getElementById(nav.title)
                                 .offsetTop
-                            window.scrollTo({ top, behavior: 'smooth' })
+                            window?.scrollTo({ top, behavior: 'smooth' })
                         }}
                         css={navItem}
                     >
