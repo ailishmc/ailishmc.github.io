@@ -29,24 +29,13 @@ export const StyledH3 = styled.h3`
 export const StyledP = styled.p`
     font-style: normal;
     font-weight: normal;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.5rem;
-    padding-bottom: inherit;
+    padding-bottom: 1.5rem;
+    letter-spacing: 0.02rem;
     text-align: inherit;
 
     color: #6a6a6a;
-`
-
-export const StyledP2 = styled.p`
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
-    /* or 122% */
-
-    text-align: center;
-
-    color: #828282;
 `
 
 export const VisuallyHidden = styled.div`
@@ -57,4 +46,18 @@ export const VisuallyHidden = styled.div`
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap; /* added line */
+`
+
+export const StyledAnchor = styled.a`
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.09rem;
+
+    color: rgba(17, 17, 17, 0.46);
+
+    &:hover {
+        cursor: pointer;
+        color: rgba(17, 17, 17, 0.76);
+    }
 `

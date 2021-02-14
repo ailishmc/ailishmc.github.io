@@ -1,9 +1,8 @@
 import React, { FunctionComponent } from 'react'
-import { StyledH2, StyledP, StyledP2, StyledH3 } from '../styles'
+import { StyledH2, StyledP, StyledP2, StyledH3, StyledAnchor } from '../styles'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import { useSiteMetadata } from '../hooks/use-site-metadata'
-import { PenTool, Code, ThumbsUp } from 'react-feather'
 
 const servicesContainer = css`
     min-height: 100vh;
@@ -70,11 +69,13 @@ const ServicesIconGroup: FunctionComponent<ServicesIconGroupProps> = props => {
     )
 }
 
-const iconCss = css`
-    position: relative;
-    top: 35%;
-    left: 35%;
+const indented = css`
+    padding-left: 1.5em;
 `
+
+const ICanHelp = () => {
+    return <StyledAnchor css={{fontSize: 'inherit', letterSpacing: 'inherit'}} href={'mailto:ailishmccarthy94@gmail.com'}>I can help</StyledAnchor>;
+}
 
 interface ServicesProps {
     title: string
@@ -94,27 +95,79 @@ const Services = (props: ServicesProps) => {
                 <StyledP>{info}</StyledP>
             </div>
             <IconContainer>
-                <ServicesIconGroup
-                    heading={services[0]?.title}
-                    blurb={services[0]?.blurb}
-                    ellipseColor={'#FFE6E2'}
-                >
-                    <PenTool css={iconCss} color={'#FC6450'} size={34} />
-                </ServicesIconGroup>
-                <ServicesIconGroup
-                    heading={services[1]?.title}
-                    blurb={services[1]?.blurb}
-                    ellipseColor={'#FFE1D4'}
-                >
-                    <Code css={iconCss} color={'#FF631F'} size={34} />
-                </ServicesIconGroup>
-                <ServicesIconGroup
-                    heading={services[2]?.title}
-                    blurb={services[2]?.blurb}
-                    ellipseColor={'#FFF9C8'}
-                >
-                    <ThumbsUp css={iconCss} color={'#E3CD03'} size={34} />
-                </ServicesIconGroup>
+                <StyledP>
+                    <StyledP>Are you:</StyledP>
+                    <div css={indented}>
+                        <StyledP>
+                            🎨 A designer...
+                            <div css={indented}>
+                                <ul>
+                                    <li>
+                                        in need of a developer to pair up with
+                                        on a website? <ICanHelp />
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        doing your own development but in need
+                                        of some developer office hours?{' '}
+                                        <ICanHelp />
+                                    </li>
+                                </ul>
+                            </div>
+                        </StyledP>
+                        <StyledP>
+                            💼 A small business owner...
+                            <div css={indented}>
+                                <ul>
+                                    <li>
+                                        in need of a quick website or Shopify
+                                        set up? <ICanHelp />
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        looking for something more bespoke and
+                                        tailored? <ICanHelp />
+                                    </li>
+                                </ul>
+                            </div>
+                        </StyledP>
+                        <StyledP>
+                            🚀 A company/startup...
+                            <div css={indented}>
+                                <ul>
+                                    <li>
+                                        creating a website or webapp and in need
+                                        of a freelancer to develop it?{' '}
+                                        <ICanHelp />
+                                    </li>
+                                </ul>
+                            </div>
+                        </StyledP>
+                        <StyledP>
+                            💡 A person with a cool idea...
+                            <div css={indented}>
+                                <ul>
+                                    <li>
+                                        needing someone to build it? <ICanHelp />
+                                    </li>
+                                </ul>
+                            </div>
+                        </StyledP>
+                        <StyledP>
+                            🚫 None of the above?
+                            <div css={indented}>
+                                <ul>
+                                    <li>
+                                        Reach out anyway, maybe <ICanHelp />
+                                    </li>
+                                </ul>
+                            </div>
+                        </StyledP>
+                        <StyledP></StyledP>
+                    </div>
+                </StyledP>
             </IconContainer>
         </div>
     )

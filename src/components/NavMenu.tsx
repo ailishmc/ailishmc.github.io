@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
+import {StyledAnchor} from '../styles'
 
 const ListContainer = styled.ul`
     display: flex;
@@ -16,25 +17,13 @@ const ListContainer = styled.ul`
     }
 `
 
-const navItem = css`
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.1rem;
-    letter-spacing: 0.07rem;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-
-    color: rgba(17, 17, 17, 0.46);
-
-    &:hover {
-        cursor: pointer;
-        color: rgba(17, 17, 17, 0.76);
-    }
-`
 const navCss = css`
     width: fit-content;
 `
 
+const noUnderline = css`
+    text-decoration: none;
+`
 interface NavMenuProps {
     navs: { title: string; url: string }[]
 }
@@ -46,24 +35,24 @@ const NavMenu = ({ navs }: NavMenuProps) => {
         if (nav.title == 'contact') {
             navItems.push(
                 <li>
-                    <a css={navItem} href={nav.url}>
+                    <StyledAnchor css={noUnderline} href={nav.url}>
                         {nav.title}
-                    </a>
+                    </StyledAnchor>
                 </li>
             )
         } else {
             navItems.push(
                 <li>
-                    <a
+                    <StyledAnchor
+                        css={noUnderline}
                         onClick={() => {
                             const top = document?.getElementById(nav.title)
                                 .offsetTop
                             window?.scrollTo({ top, behavior: 'smooth' })
                         }}
-                        css={navItem}
                     >
                         {nav.title}
-                    </a>
+                    </StyledAnchor>
                 </li>
             )
         }

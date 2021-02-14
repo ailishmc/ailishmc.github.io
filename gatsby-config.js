@@ -6,7 +6,7 @@ module.exports = {
             emoji: `👋`,
             pars: [
                 `I’m a web developer and sometimes designer based in Dublin. I
-                    have years of experience building accessibile and
+                    have years of experience building accessible and
                     highly performant enterprise applications. Currently working frontend at Workday but available for freelance work.`,
                 `Please get in touch with your project ideas!`,
             ],

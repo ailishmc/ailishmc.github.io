@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledH2, StyledP, StyledP2, StyledH3 } from '../styles'
+import { StyledH2, StyledP, StyledH3 } from '../styles'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import { useSiteMetadata } from '../hooks/use-site-metadata'
@@ -62,9 +62,9 @@ const PortfolioItem = props => {
                     >
                         {title}
                     </StyledH3>
-                    <StyledP2 style={{ mixBlendMode: 'difference' }}>
+                    <StyledP style={{ mixBlendMode: 'difference' }}>
                         {description}
-                    </StyledP2>
+                    </StyledP>
                 </div>
             </div>
         </div>

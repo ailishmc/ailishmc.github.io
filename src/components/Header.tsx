@@ -28,6 +28,11 @@ const TitleStyled = styled.h1`
     word-wrap: break-word;
 
     color: rgba(17, 17, 17, 0.76);
+
+    &:hover {
+        cursor: pointer;
+        font-weight: bold;
+    } 
 `
 
 const relativeContainer = css`
@@ -52,7 +57,6 @@ const Header = ({ siteTitle, navs }: HeaderProps) => (
             <TitleStyled>
                 {/* todo make accessible  */}
                 <a
-                    style={{ cursor: 'pointer' }}
                     onClick={() => {
                         window?.scrollTo({ top: 0, behavior: 'smooth' })
                     }}
