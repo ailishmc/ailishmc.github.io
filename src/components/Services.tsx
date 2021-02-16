@@ -1,8 +1,7 @@
-import React, { FunctionComponent } from 'react'
-import { StyledH2, StyledP, StyledP2, StyledH3, StyledAnchor } from '../styles'
+import React from 'react'
+import { StyledH2, StyledP, StyledAnchor } from '../styles'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
-import { useSiteMetadata } from '../hooks/use-site-metadata'
 
 const servicesContainer = css`
     min-height: 100vh;
@@ -18,56 +17,6 @@ const IconContainer = styled.div`
     flex-wrap: wrap;
     justify-content: center;
 `
-
-type IconProps = {
-    ellipseColor: string
-}
-
-const Icon: FunctionComponent<IconProps> = props => {
-    const { ellipseColor, children } = props
-
-    const Ellipse = styled.div`
-        width: 110px;
-        height: 110px;
-        border-radius: 50%;
-        margin-bottom: 10px;
-        position: relative;
-
-        background-color: ${ellipseColor};
-    `
-
-    return <Ellipse>{children}</Ellipse>
-}
-
-type ServicesIconGroupProps = {
-    heading: string
-    blurb: string
-    ellipseColor: string
-    style?: string
-}
-
-const ServicesIconGroup: FunctionComponent<ServicesIconGroupProps> = props => {
-    const { ellipseColor, heading, blurb, children, style } = props
-
-    const servicesIconCss = css`
-        flex: 0 1 300px;
-        margin: 30px;
-        display: grid;
-        place-items: center;
-        align-items: start;
-        grid-auto-rows: min-content;
-
-        ${style}
-    `
-
-    return (
-        <div css={servicesIconCss}>
-            <Icon ellipseColor={ellipseColor}>{children}</Icon>
-            <StyledH3>{heading}</StyledH3>
-            <StyledP2>{blurb}</StyledP2>
-        </div>
-    )
-}
 
 const indented = css`
     padding-left: 1.5em;

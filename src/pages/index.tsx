@@ -14,10 +14,10 @@ const IndexPage = () => {
         title,
         lang,
         author,
-        description,
+        desc,
         socials,
     } = useSiteMetadata()
-    const { heading, emoji, pars } = description
+    const { heading, emoji, pars } = desc
 
     return (
         <Router>

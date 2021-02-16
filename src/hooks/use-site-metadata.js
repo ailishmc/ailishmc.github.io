@@ -7,7 +7,7 @@ export const useSiteMetadata = () => {
                     siteMetadata {
                         title
                         author
-                        description {
+                        desc {
                             heading
                             emoji
                             pars

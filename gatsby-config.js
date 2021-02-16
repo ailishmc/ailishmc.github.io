@@ -1,7 +1,17 @@
 module.exports = {
     siteMetadata: {
         title: `AILISH MCCARTHY`,
-        description: {
+        // description: {
+        //     heading: `Hi, I’m Ailish`,
+        //     emoji: ``,
+        //     pars: [
+        //         `I’m a web developer and sometimes designer based in Dublin. I
+        //             have years of experience building accessible and
+        //             highly performant enterprise applications. Currently working frontend at Workday but available for freelance work.`,
+        //         `Please get in touch with your project ideas!`,
+        //     ],
+        // },
+        desc: {
             heading: `Hi, I’m Ailish`,
             emoji: `👋`,
             pars: [
