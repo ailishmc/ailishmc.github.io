@@ -4,7 +4,6 @@ import SEO from '../components/Seo'
 import Home from '../components/Home'
 import Hero from '../components/Hero'
 import Services from '../components/Services'
-import { BrowserRouter as Router } from 'react-router-dom'
 import Portfolio from '../components/Portfolio'
 import { useSiteMetadata } from '../hooks/use-site-metadata'
 
@@ -20,7 +19,6 @@ const IndexPage = () => {
     const { heading, emoji, pars } = desc
 
     return (
-        <Router>
             <Home>
                 <SEO title={title} lang={lang} author={author} />
                 <Hero
@@ -32,7 +30,6 @@ const IndexPage = () => {
                 <Services title={navs[0].title} info={navs[0].info} />
                 <Portfolio title={navs[1].title} info={navs[1].info} />
             </Home>
-        </Router>
     )
 }
 export default IndexPage
