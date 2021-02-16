@@ -37,7 +37,17 @@ export const StyledP = styled.p`
 
     color: #6a6a6a;
 `
+export const StyledP2 = styled.p`
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    /* or 122% */
 
+    text-align: center;
+
+    color: #828282;
+`
 export const VisuallyHidden = styled.div`
     position: absolute !important;
     height: 1px;
